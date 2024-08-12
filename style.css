@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@75..125,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 *{
     border: 0;
     margin: 0;
@@ -38,6 +41,56 @@ main{
     height: 47px;
 }
 
+.right-menu{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: 55px;
+}
+
+.menu-lang{
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.planet-icon{
+    display: flex;
+}
+
+.lang-txt{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: white;
+    font-size: 10pt;
+}
+
+.font-menu{
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    color: white;
+}
+
+.menu-bar{
+    display: flex;
+    flex-direction: column;
+    gap: 4px; 
+    cursor: pointer;
+}
+
+.bar{
+    background-color: white;
+    width: 27px;
+    height: 4px;
+    border-radius: 10px;
+}
+
 .logo-menu{
     margin-right: 20px;
 }
+
