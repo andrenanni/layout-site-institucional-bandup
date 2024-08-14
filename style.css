@@ -9,14 +9,24 @@
 }
 
 html,body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     width: 100%;
     height: 100%;
 }
 
-main{
+header{
+    width: 100%;
     max-width: 2000px;
-    height: 100%;
-    background-color: crimson;
+    min-height: 100vh;
+    background-color: crimson; 
+}
+
+main{
+    width: 100%;
+    max-width: 2000px;
+    min-height: 100vh;
 }
 
 .header{
@@ -94,3 +104,24 @@ main{
     margin-right: 20px;
 }
 
+.background{
+    background-color: crimson;
+}
+
+.content{
+    width: 100%;
+    height: 1000px;
+    background-color: darkgrey;
+}
+
+footer{
+    display: flex;
+    width: 100%;
+}
+
+.footer-content{
+    width: 100%;
+    height: 350px;
+    background-color: aqua;
+
+}
