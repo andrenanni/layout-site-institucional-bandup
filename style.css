@@ -110,11 +110,12 @@ header{
 
 .footer-content{
     display: flex;
+    justify-content: center;
     width: 100%;
     height: 350px;
     background-color: #191919;
     padding: 45px;
-    gap: 70px;
+    gap: 80px;
 }
 
 .left-footer{
@@ -199,4 +200,22 @@ a{
     color: #D5D5D5;
     font-size: 9pt;
     line-height: 15px;
+}
+
+.newletter{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-txt{
+    display: flex;
+    gap: 10px;
+}
+
+.input-box{
+    border-radius: 100px;
+    width: 50%;
+    height: 30px;
 }
