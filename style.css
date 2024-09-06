@@ -212,10 +212,28 @@ a{
 .input-txt{
     display: flex;
     gap: 10px;
+    width: 100%;
 }
 
 .input-box{
     border-radius: 100px;
+    width: 100%;
+    height: 30px;
+}
+
+.button{
+    display: flex;
     width: 50%;
     height: 30px;
+    border-radius: 100px;
+}
+
+@media (max-width: 1281px){
+    .NLtxt{
+        display: block;
+    }
+    .input-txt{
+        flex-direction: column;
+        align-items: center;
+    }
 }
