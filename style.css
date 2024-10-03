@@ -117,6 +117,15 @@ header{
     height: 400px;
     border-radius: 22px;
     background-color: rgb(255, 0, 0);
+    opacity: 1;
+    transition: all .3s;
+    transform: translateY(0);
+}
+
+#menuaberto.close{
+    opacity: 0;
+    z-index: -1;
+    transform: translateY(-100%);
 }
 
 #menuaberto p:nth-child(-n+5){
