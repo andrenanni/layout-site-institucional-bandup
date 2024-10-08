@@ -37,94 +37,15 @@ header{
     box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.5);
 }
 
-.menu{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 50px;
-}
 
-.left-menu{
-    display: flex;
-    align-items: center;
-}
 
-.right-menu{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    width: 240px;
-    height: 45px;
-    border-radius: 100px;
-    background-color: #F3F3F3;
-    position: relative;
-}
 
-#menuaberto{
-    position: absolute;
-    top: 0;
-    width: 240px;
-    height: 400px;
-    border-radius: 22px;
-    background-color: rgb(255, 0, 0);
-}
 
-.menu-lang{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    cursor: pointer;
-}
 
-.planet-icon img{
-    display: flex;
-    width: 17px;
-}
 
-.lang-txt{
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    color: #0D0D0D;
-    font-size: 8pt;
-}
 
-.font-menu{
-    font-family: "Fredoka", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-    color: #0D0D0D;
-}
 
-.menu-bar{
-    display: flex;
-    flex-direction: column;
-    gap: 4px; 
-    cursor: pointer;
-}
 
-.bar{
-    background-color: #0D0D0D;
-    width: 27px;
-    height: 4px;
-    border-radius: 10px;
-}
-
-.logo-menu{
-    position: relative;
-    width: 160px;
-    height: auto;
-    z-index: 2;
-}
-
-.menu-lang{
-    display: flex;
-}
 
 /*--Slider--*/
 
