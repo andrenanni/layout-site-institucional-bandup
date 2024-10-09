@@ -22,9 +22,17 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 })
 
-document.querySelector('header').addEventListener('scroll', function(e){
+window.addEventListener('scroll', function(e){
 	e.preventDefault();
-	document.querySelector('.header-slide-menu').classList.toggle('show');
+
+	const scrollY = window.scrollY;
+	if (scrollY > 50){
+		document.querySelector('.header-slide-menu').classList.add('show');
+	}
+	else if (scrollY < (scrollY-1)){
+		document.querySelector('.header-slide-menu').classList.remove('show');
+	}
+	console.log(scrollY)
 })
 
 // remove dragstart
