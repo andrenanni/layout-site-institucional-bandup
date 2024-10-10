@@ -29,7 +29,7 @@ window.addEventListener('scroll', function(e){
 	if (scrollY > 50){
 		document.querySelector('.header-slide-menu').classList.add('show');
 	}
-	else if (scrollY < (scrollY-1)){
+	else if (scrollY < 1){
 		document.querySelector('.header-slide-menu').classList.remove('show');
 	}
 	console.log(scrollY)
