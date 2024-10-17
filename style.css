@@ -66,6 +66,7 @@ header{
     display: flex;
     align-items: center;
     gap: 8px;
+    height: 100%;
     cursor: pointer;
 }
 
@@ -164,7 +165,8 @@ header{
     vertical-align: middle;
 }
 
-#menuaberto-lang{
+.menuaberto-lang{
+    display: none;
     position: absolute;
     width: 150px;
     height: auto;
@@ -182,25 +184,20 @@ header{
     transition: all .2s;
 }
 
-#menuaberto-lang.close{
-    opacity: 0;
-    z-index: -1;
-}
-
-#menuaberto-lang ul{
+.menuaberto-lang ul{
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-#menuaberto-lang li{
+.menuaberto-lang li{
     display: flex;
     align-items: center;
     gap: 7px;
     cursor: pointer;
 }
 
-#menuaberto-lang span:nth-child(1){
+.menuaberto-lang span:nth-child(1){
     border-right: 1px solid #0D0D0D;
     padding: 8px;
     height: 20px;
@@ -209,7 +206,7 @@ header{
     align-items: center;
 }
 
-#menuaberto-lang li:hover{
+.menuaberto-lang li:hover{
     background-color: #e9e9e9;
     border-radius: 7px;
 }
@@ -404,6 +401,10 @@ input::placeholder{
 
 .lang-txt:hover{
     color: #5a5a5a;
+}
+
+.menu-lang:hover .menuaberto-lang{
+    display: block;
 }
 
 @media (max-width: 1281px){

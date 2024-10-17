@@ -41,9 +41,3 @@ document.querySelectorAll('a, img').forEach(drag => {
 		e.preventDefault();
 	});
 });
-
-// Script menu lang
-document.querySelector('.lang-txt').addEventListener('mouseover', function(e){
-	e.preventDefault();
-	document.querySelector('#menuaberto-lang').classList.toggle('close')
-});
