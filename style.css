@@ -25,27 +25,11 @@ header{
     justify-content: center;
 }
 
-.header{
-    display: flex;
-    padding-top: 33px;
-}
-
 .menu{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.left-menu{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    background-color: yellow;
-    border-radius: 0 100px 100px 0;
-    box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.2);
-    width: 260px;
-    height: 47px;
 }
 
 .right-menu{
@@ -57,7 +41,7 @@ header{
     background-color: #F8F8F8;
     border-radius: 100px;
     box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.2);
-    width: 230px;
+    padding: 0 32px;
     height: 47px;
     position: relative;
 }
@@ -220,32 +204,27 @@ header{
 }
 
 .logo-menu-slide{
-    width: 160px;
+    max-width: 160px;
     height: auto;
 }
 
 .left-menu-slide{
     display: flex;
-    margin-left: 55px;
+    margin: 55px;
 }
 
 .header-slide-menu{
     display: flex;
+    position: fixed;
     width: 100%;
     height: 100%;
     justify-content: center;
-    transition: all .3s;
-    transform: translateY(-100px);
-    opacity: 0;
-    z-index: -1;
+    transition: ease .4s;
     padding: 0 20px 0 20px;
-}
-
-.header-slide-menu.show{
-    transform: translateY(20px);
-    position: fixed;
-    opacity: 1;
-    z-index: 1;
+    margin-top: 20px;
+    &--scrolled {
+        height: 40px;
+      }
 }
 
 .lang-inside-menu{
@@ -256,8 +235,8 @@ header{
 .header-slide{
     display: flex;
     align-items: center;
-    width: 1400px;
-    max-width: 1400px;
+    width: 100%;
+    max-width: 1200px;
     height: 60px;
     border-radius: 100px;
     background-color: rgba(0, 0, 0, 0.35);
@@ -452,5 +431,15 @@ input::placeholder{
     .NLtxt{
         display: flex;
         justify-content: center;
+    }
+}
+
+@media (max-width: 600px){
+    .menu-lang{
+        display: none;
+    }
+
+    .font-menu-hidden{
+        display: none;
     }
 }

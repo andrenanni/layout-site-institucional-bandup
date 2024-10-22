@@ -22,22 +22,22 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 })
 
-window.addEventListener('scroll', function(e){
-	e.preventDefault();
-
-	const scrollY = window.scrollY;
-	if (scrollY > 50){
-		document.querySelector('.header-slide-menu').classList.add('show');
-	}
-	else if (scrollY < 1){
-		document.querySelector('.header-slide-menu').classList.remove('show');
-	}
-	console.log(scrollY)
-})
-
 // remove dragstart
 document.querySelectorAll('a, img').forEach(drag => {
 	drag.addEventListener('dragstart', function(e){
 		e.preventDefault();
 	});
 });
+
+// show/hidden menu
+const showAnim = gsap.from('.header-slide-menu', { 
+	yPercent: -100,
+	paused: true,
+	duration: 0.2
+  }).progress(1);
+  
+  ScrollTrigger.create({
+	onUpdate: (self) => {
+	  self.direction === -1 ? showAnim.play() : showAnim.reverse()
+	}
+  });
