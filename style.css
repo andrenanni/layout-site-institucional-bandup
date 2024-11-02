@@ -19,8 +19,6 @@ header{
     width: 100%;
     height: 100vh;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
 }
 
 main{
@@ -34,10 +32,42 @@ main{
     height: 100%;
 }
 
-#video-home{
+.banner{
+    background-color: #1f1f1f;
+    width: 100%;
+    height: 50vh;
+}
+
+.banner-text{
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    height: calc(50vh - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-text h2{
+    color: #FFDF00;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: white;
+    font-size: 50pt;
+}
+
+.mouse-icon{
     width: 100%;
     height: 100%;
-    clip-path: polygon(30% 100%,100% 100%,100% 0%,85% 0);
+    display: flex;
+    align-items: center;
+}
+
+.video-home{
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -46,6 +76,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 30px;
 }
 
 .right-menu{
@@ -53,7 +84,6 @@ main{
     align-items: center;
     justify-content: center;
     gap: 15px;
-    margin-right: 55px;
     background-color: #F8F8F8;
     border-radius: 100px;
     box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.2);
@@ -100,7 +130,7 @@ main{
 }
 
 .menu-bar{
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 4px; 
     cursor: pointer;
@@ -163,6 +193,7 @@ main{
 #menuaberto img:nth-of-type(2){
     width: 70px;
     vertical-align: middle;
+    
 }
 
 .menuaberto-lang{
@@ -220,13 +251,30 @@ main{
 }
 
 .logo-menu-slide{
-    max-width: 160px;
+    max-width: 190px;
     height: auto;
 }
 
 .left-menu-slide{
     display: flex;
-    margin: 55px;
+}
+
+.middle-menu{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px;
+    width: 100%;
+    gap: 30px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 10pt;
+}
+
+.middle-menu a{
+    color: white;
+    text-decoration: none;
 }
 
 .header-slide-menu{
@@ -235,9 +283,8 @@ main{
     width: 100%;
     height: 100%;
     justify-content: center;
-    transition: ease .4s;
-    padding: 0 20px 0 20px;
-    margin-top: 30px;
+    transition: ease .5s;
+    z-index: 1;
     &--scrolled {
         height: 40px;
       }
@@ -251,14 +298,14 @@ main{
 .header-slide{
     display: flex;
     align-items: center;
-    width: calc(100% - 100px);
+    width: 100%;
     max-width: 2000px;
-    height: 60px;
-    border-radius: 100px;
-    background-color: rgba(0, 0, 0, 0.35);
+    height: 100px;
+    background-color: #1f1f1f;
+    /* background-color: rgba(0, 0, 0, 0.35); */
     backdrop-filter: blur(10px);
     /* border: 1px groove rgb(0, 0, 0); */
-    box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.5); */
 }
 
 .content{
@@ -457,5 +504,9 @@ input::placeholder{
 
     .font-menu-hidden{
         display: none;
+    }
+
+    .menu-bar{
+        display: flex;
     }
 }

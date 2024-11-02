@@ -41,4 +41,3 @@ const showAnim = gsap.from('.header-slide-menu', {
 	  self.direction === -1 ? showAnim.play() : showAnim.reverse()
 	}
   });
-
