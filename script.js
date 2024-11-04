@@ -41,3 +41,11 @@ const showAnim = gsap.from('.header-slide-menu', {
 	  self.direction === -1 ? showAnim.play() : showAnim.reverse()
 	}
   });
+
+  document.querySelector('.mouse-roll').addEventListener('click', function() {
+	document.querySelector('.banner-content').scrollIntoView({
+		behavior: 'smooth',
+		block: 'start'
+	});
+	console.log("Ok");
+  });

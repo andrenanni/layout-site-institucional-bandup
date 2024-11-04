@@ -59,9 +59,46 @@ main{
 }
 
 .mouse-icon{
+    flex-direction: column;
+    position: absolute;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+    gap: 5px;
+}
+
+.mouse-icon img{
+    width: 25px;
+    height: auto;
+    animation: pular 1s infinite alternate;
+}
+@keyframes pular {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.mouse-icon p{
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 11pt;
+    color: white;
+}
+
+.mouse-roll{
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
