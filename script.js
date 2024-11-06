@@ -44,8 +44,7 @@ const showAnim = gsap.from('.header-slide-menu', {
 
   document.querySelector('.mouse-roll').addEventListener('click', function() {
 	document.querySelector('.banner-content').scrollIntoView({
-		behavior: 'smooth',
-		block: 'start'
+		block: 'start',
+		behavior: 'smooth'
 	});
-	console.log("Ok");
   });
