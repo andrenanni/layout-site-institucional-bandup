@@ -17,8 +17,6 @@ html,body{
 
 header{
     width: 100%;
-    height: 100vh;
-    min-height: 100vh;
 }
 
 main{
@@ -30,6 +28,7 @@ main{
 .banner-content{
     width: 100%;
     height: 100%;
+    display: flex;
 }
 
 .banner{
@@ -487,6 +486,13 @@ input::placeholder{
     display: block;
 }
 
+.message{
+    display: flex;
+    width: 100%;
+    height: 1000px;
+    background-color: crimson;
+}
+
 @media (max-width: 1281px){
     .NLtxt{
         display: block;
@@ -497,7 +503,7 @@ input::placeholder{
     }
 }
 
-@media (max-width: 1000px){
+@media (max-width: 991.98px){
     .center-footer{
         justify-content: center;
         gap: 20px;
@@ -532,6 +538,22 @@ input::placeholder{
     .NLtxt{
         display: flex;
         justify-content: center;
+    }
+
+    .menu-lang{
+        display: none;
+    }
+
+    .font-menu-hidden{
+        display: none;
+    }
+
+    .menu-bar{
+        display: flex;
+    }
+
+    .middle-menu{
+        display: none;
     }
 }
 
