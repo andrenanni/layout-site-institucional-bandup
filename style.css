@@ -48,7 +48,6 @@ main{
 }
 
 .banner-text h2{
-    color: #FFDF00;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
@@ -347,7 +346,6 @@ main{
 
 .content{
     width: 100%;
-    height: 1000px;
     background-color: darkgrey;
 }
 
@@ -492,6 +490,103 @@ input::placeholder{
     height: 1000px;
     background-color: crimson;
 }
+
+/* Infinite scroll brands */
+
+.content-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    gap: 20px;
+}
+
+.content-wrapper p{
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20pt;
+    color: #0D0D0D;
+}
+
+.content-wrapper a{
+    width: 100%;
+    height: auto;
+}
+
+.wrapper{
+    width: 90%;
+    max-width: 1536px;
+    margin-inline: auto;
+    position: relative;
+    height: 100px;
+    overflow: hidden;
+    cursor: pointer;
+    mask-image: linear-gradient(
+        to right,
+        rgba(0,0,0,0),
+        rgba(0,0,0,1) 20%,
+        rgba(0,0,0,1) 80%,
+        rgba(0,0,0,0)
+        );
+}
+
+@keyframes scrollLeft{
+    to{
+        left: -200px;
+    }
+}
+
+.item{
+    width: 200px;
+    height: 100px;
+    background-color: chocolate;
+    border-radius: 6px;
+    position: absolute;
+    left: max(calc(200px * 8), 100%);
+    animation-name: scrollLeft;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: -25s;
+}
+
+.item1{
+    animation-delay: calc(30s / 8 * (8 - 1) * -1);
+}
+
+.item2{
+    animation-delay: calc(30s / 8 * (8 - 2) * -1);
+}
+
+.item3{
+    animation-delay: calc(30s / 8 * (8 - 3) * -1);
+}
+
+.item4{
+    animation-delay: calc(30s / 8 * (8 - 4) * -1);
+}
+
+.item5{
+    animation-delay: calc(30s / 8 * (8 - 5) * -1);
+}
+
+.item6{
+    animation-delay: calc(30s / 8 * (8 - 6) * -1);
+}
+
+.item7{
+    animation-delay: calc(30s / 8 * (8 - 7) * -1);
+}
+
+.item8{
+    animation-delay: calc(30s / 8 * (8 - 8) * -1);
+}
+
+/* END - Infinite scroll brands */
 
 @media (max-width: 1281px){
     .NLtxt{
