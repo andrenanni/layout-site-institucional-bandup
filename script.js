@@ -14,13 +14,13 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 });
 
-// Script menu full
+/* Script menu full
 document.addEventListener("DOMContentLoaded", function () {
 	document.querySelector('.menu-bar').addEventListener('click', function (e) {
 		e.preventDefault();
 		document.querySelector('#menuaberto').classList.toggle('close');
 	});
-})
+}) */
 
 // remove dragstart
 document.querySelectorAll('a, img').forEach(drag => {

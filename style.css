@@ -179,12 +179,15 @@ main{
     border-radius: 10px;
 }
 
-#menuaberto{
+.menuaberto{
     position: absolute;
     display: flex;
+    visibility: hidden;
+    opacity: 0;
     flex-direction: column;
     align-items: center;
     top: 60px;
+    right: 0;
     width: 230px;
     height: auto;
     border-radius: 22px;
@@ -200,14 +203,21 @@ main{
     transition: all .2s;
 }
 
-#menuaberto.close{
-    opacity: 0;
-    z-index: -1;
+.menu-bar:focus .menuaberto{
+    visibility: visible;
+    opacity: 1;
 }
 
-#menuaberto a{
+.menuaberto a{
     color: #0D0D0D;
     text-decoration: none;
+    display: flex;
+    gap: 5px;
+}
+
+.img-cosmos-menu{
+    width: auto;
+    height: 20px;
 }
 
 .line-menu{
@@ -226,7 +236,7 @@ main{
     font-size: 12pt;
 }
 
-#menuaberto img:nth-of-type(2){
+.menuaberto img:nth-of-type(2){
     width: 70px;
     vertical-align: middle;
     
@@ -328,7 +338,7 @@ main{
 
 .lang-inside-menu{
     display: flex;
-
+    gap: 5px;
 }
 
 .header-slide{
@@ -489,6 +499,36 @@ input::placeholder{
     width: 100%;
     height: 1000px;
     background-color: crimson;
+}
+
+.scrollingText{
+    display: flex;
+    width: 100%;
+    max-width: 2000px;
+    padding: 0 20px 0 20px;
+    overflow: hidden;
+}
+
+.textFAN{
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    color: #D5D5D5;
+    font-size: 70pt; 
+    white-space: nowrap;
+    animation: leftRight 5s ease-in-out infinite;
+}
+
+@keyframes leftRight {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-520px);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 /* Infinite scroll brands */
