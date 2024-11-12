@@ -29,6 +29,18 @@ main{
     width: 100%;
     height: 100%;
     display: flex;
+    position: relative;
+}
+
+.banner-content::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(to bottom, transparent, white);
+    pointer-events: none;
 }
 
 .banner{
@@ -348,15 +360,12 @@ main{
     max-width: 2000px;
     height: 100px;
     background-color: #1f1f1f;
-    /* background-color: rgba(0, 0, 0, 0.35); */
     backdrop-filter: blur(10px);
-    /* border: 1px groove rgb(0, 0, 0); */
-    /* box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.5); */
+    z-index: 1;
 }
 
 .content{
     width: 100%;
-    background-color: darkgrey;
 }
 
 #footer-content{
@@ -496,40 +505,76 @@ input::placeholder{
 
 .message{
     display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 1000px;
     background-color: crimson;
+}
+
+.video-bob-piticao{
+    display: flex;
+    width: 350px;
+    height: auto;
 }
 
 .scrollingText{
     display: flex;
+    justify-content: center;
     width: 100%;
     max-width: 2000px;
     padding: 0 20px 0 20px;
-    overflow: hidden;
+    position: absolute;
+    top: 50%;
+}
+
+.scrollingText_fan{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    z-index: 3;
 }
 
 .textFAN{
     font-family: "Poppins", sans-serif;
     font-weight: 900;
     font-style: normal;
-    color: #D5D5D5;
-    font-size: 70pt; 
-    white-space: nowrap;
-    animation: leftRight 5s ease-in-out infinite;
+    color: #1f1f1f;
+    font-size: 70pt;
 }
 
-@keyframes leftRight {
-    0% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(-520px);
-    }
-    100% {
-        transform: translateX(0);
-    }
+.textFAN span{
+    color: #FFDF00;
 }
+
+.textFAN_description{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.textFAN_description p:nth-child(1){
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 25pt;
+    color: #1f1f1f;
+}
+
+.textFAN_description p{
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20pt;
+    color: #1f1f1f;
+}
+
+.textFAN_description a{
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    color: #FFDF00;
+}
+
 
 /* Infinite scroll brands */
 
