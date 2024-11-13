@@ -27,9 +27,11 @@ main{
 
 .banner-content{
     width: 100%;
+    max-width: 2000px;
     height: 100%;
     display: flex;
     position: relative;
+    margin: auto;
 }
 
 .banner-content::after {
@@ -503,17 +505,108 @@ input::placeholder{
     display: block;
 }
 
-.message{
+/* EVENTOS */
+
+.blocos-eventos{
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
+    gap: 20px;
+}
+
+.slide-eventos{
+    display: flex;
+    width: 100%;
+    max-width: 2000px;
+    height: 768px;
     background-color: crimson;
+}
+
+.blocos-eventos p{
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 25pt;
+    color: #1f1f1f;
+}
+
+
+/* FIM EVENTOS */
+
+.message{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    gap: 20px;
+    background: url(img/banner_pattern.png), rgba(255, 255, 255, .8) no-repeat center center fixed;;
+    background-size: cover;
+    background-blend-mode: lighten;
+}
+
+.message-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+
+.message-description{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    gap: 20px;
+}
+
+.message-description p:nth-child(1){
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: #191919;
+    font-size: 30pt; 
+}
+
+.message-description p:nth-child(2){
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #191919;
+    font-size: 15pt; 
+}
+
+.message-description button{
+    width: 300px;
+    height: 50px;
+    border-radius: 20px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 15px;
+    color: #191919;
+    background-color: #FFDF00;
 }
 
 .video-bob-piticao{
     display: flex;
     width: 350px;
     height: auto;
+}
+
+.cosmos{
+    margin: auto;
+}
+
+.cosmos img{
+    object-fit: cover;
+    width: 100%;
+    max-width: 2000vw;
 }
 
 .scrollingText{

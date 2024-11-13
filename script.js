@@ -48,3 +48,6 @@ const showAnim = gsap.from('.header-slide-menu', {
 		behavior: 'smooth'
 	});
   });
+
+// slideshow_home
+
