@@ -51,30 +51,18 @@ const showAnim = gsap.from('.header-slide-menu', {
 
 // slideshow_home
 
-;
-
-var swiper = new Swiper(".swiper",{
-	effect: "coverflow",
-	grabCursor: true,
+var swiper = new Swiper(".mySwiper", {
 	centeredSlides: true,
-	initialSlide: 2,
-	speed: 600,
-	reventClicks: true,
-	sliderPerView: "auto",
-	coverflowEffect:{
-		rotate: 0,
-		stretch: 80,
-		depth: 350,
-		modifier: 1,
-		slideShadows: true,
+	autoplay: {
+	  delay: 2500,
+	  disableOnInteraction: false,
 	},
-	on:{
-		click(event){
-			swiper.slideTo(this.clickedIndex);
-		},
+	effect: 'fade',
+  		fadeEffect: {
+    	crossFade: true
+  },
+	pagination: {
+	  el: ".swiper-pagination",
+	  clickable: true,
 	},
-	pagination:{
-		el: ".swiper-pagination",
-	},
-});
-
+  });
