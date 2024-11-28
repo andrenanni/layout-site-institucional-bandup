@@ -572,11 +572,33 @@ input::placeholder{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background-color: crimson;
+    align-items: flex-start;
     width: 100%;
     max-height: 50%;
     padding: 0 20%;
-    padding-bottom: 50px;
+    padding-bottom: 70px;
+    gap: 5px;
+}
+
+.event-txt h3{
+    font-size: 15pt; 
+}
+
+.event-txt p, h3{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    color: #191919;
+    font-size: 30pt; 
+    text-align: start;
+}
+
+.event-txt button{
+    width: 200px;
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 10px;
 }
 
 
