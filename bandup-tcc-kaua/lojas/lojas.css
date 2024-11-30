@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+#lojas-main{
+    max-width: 2000px;
+    margin: auto;
+}
+
+.faixa-container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+    text-align: center;
+}
+
+.banner-lojas {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    scroll-snap-align: start;
+}
+
+#titulo-banner-lojas {
+    color: black;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.faixa {
+    padding: 0 50px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15pt;
+    color: white;
+    scroll-snap-align: start;
+    transition: transform .5s ease-in-out;
+    gap: 50px;
+}
+
+.lojaWarner { background: linear-gradient(#cf7413, #ff8400); }
+.lojaDc { background: linear-gradient(#1974F0, #0E438A); }
+.lojaHbo { background: linear-gradient(#000000, #5a0000); }
+.lojaCartoon { background: linear-gradient(#5E5D5C, #8B8B8B); }
+.lojaFresno { background-color: #01E5D4; }
+.lojaMonica { background: linear-gradient(#ED1C24, #871015); }
+.lojaHarry { background-color: white; }
+
+.descricao-lateral {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+}
+
+.mobile {
+    display: none;
+}
+
+
+.logo-loja img{
+    width: 90%;
+}
+
+.descricao-loja {
+
+}
+
+.lojas-button {
+    width: 350px;
+    border-radius: 50px;
+    border: 0;
+    cursor: pointer;
+    background-color: #1b1b1b;
+    color: white;
+    transition: all .8s ease;
+    font-size: 17pt;
+    height: 60px;
+}
+
+.lojas-button:hover {
+    background-color: #000000;
+    transition: all .8s ease;
+}
+
+.img-loja {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-loja img {
+
+}
+
+.lojaFresno .img-loja img, 
+.lojaHarry .img-loja img {
+    width: auto; /* Ajusta a largura conforme a proporção */
+    height: 100vh; /* Garante que a imagem ocupe sempre a altura total da tela */
+    object-fit: cover; /* Ocupa a altura da tela, mantendo a imagem responsiva */
+}
+
+.personagem{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    justify-content: center;
+    min-width: 850px;
+}
+
+
+#poster-warner { height: 90%; animation: warner 5s ease-in-out infinite;}
+@keyframes warner {
+    0% { transform: translateY(-10px);}
+    50% { transform: translateY(5px); }
+    100% { transform: translateY(-10px);}
+}
+.poster-dc { height: 80%; }
+.personagens-dc-container {
+
+}
+.poster-dc {
+    position: absolute;
+    width: auto;
+}
+#batman {
+    top: 5%;
+    left: 5%;
+    height: 50%; 
+    transform: rotate(-10deg); 
+    animation: batman 5s ease-in-out infinite;
+}
+#maravilha {
+    bottom: 10px;
+    height: 70%; 
+    z-index: 2;
+}
+#superman {
+    right: 10%;
+    height: 60%; 
+    transform: rotate(10deg); 
+    z-index: 1;
+    animation: superman 5s ease-in-out infinite;
+}
+@keyframes batman {
+    0% { transform: translateX(-10px);}
+    25% { transform: translate(-10px, 15px);}
+    100% { transform: translateX(-10px);}
+}
+@keyframes superman {
+    0% { transform: translate(0, 0) rotate(10deg); }
+    25% { transform: translate(10px, -10px) rotate(8deg); }
+    100% { transform: translate(0, 0) rotate(10deg); }
+}
+#poster-harry { transform: rotateY(180deg); } 
+#descricao-harry { color: black; }
+#poster-harry-container 
+{ 
+    margin: 0;
+    display: flex;
+    justify-content: start;
+}
+#poster-turma { width: 100%; max-width: 950px; }
+#poster-fresno-container 
+{
+    margin: 0;
+    display: flex;
+    justify-content: start;
+}
+#poster-fresno { transform: rotateY(180deg); }
+#logo-warner, #logo-dc {  width: 100%; height: auto; max-width: 500px; }
+#poster-cartoon { padding-top: 4rem; animation: cartoon 5s ease-in-out infinite;}
+@keyframes cartoon {
+        0% { transform: translateY(-10px);}
+        50% { transform: translateY(5px); }
+        100% { transform: translateY(-10px);}
+}
+
+.muda-texto {
+    display: inline-block;
+    border-right: 2px solid black;
+    padding-right: 2px;
+    animation: piscar-cursor 0.6s steps(1) infinite;
+}
+
+@keyframes piscar-cursor {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: black; }
+}
+
+.logos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; 
+}
+
+.logo { 
+    width: 50px;
+    height: 50px;
+    background-color: gray;
+    position: absolute;
+    opacity: 0;
+    animation: aparecer 1s forwards, moverAleatorio 50s ease-in-out infinite;
+}
+
+#warner-logo { top: 10%; left: 50%; animation-delay: 0.2s; }
+#dc-logo { top: 20%; left: 10%; animation-delay: 0.4s; }
+#cartoon-logo { top: 40%; left: 25%; animation-delay: 0.6s; }
+#hbo-logo { top: 70%; left: 10%; animation-delay: 0.8s; }
+#harry-logo { top: 25%; right: 15%; animation-delay: 0.4s; }
+#monica-logo { top: 45%; right: 5%; animation-delay: 0.6s; }
+#fresno-logo { top: 70%; right: 10%; animation-delay: 0.10s; }
+
+@keyframes aparecer {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moverAleatorio {
+    0% { transform: translate(0, 0); }
+    10% { transform: translate(15px, -10px); }
+    20% { transform: translate(-20px, 15px); }
+    30% { transform: translate(10px, -20px); }
+    40% { transform: translate(-15px, 10px); }
+    50% { transform: translate(20px, 15px); }
+    60% { transform: translate(-10px, -20px); }
+    70% { transform: translate(15px, 10px); }
+    80% { transform: translate(-20px, -15px); }
+    90% { transform: translate(10px, 20px); }
+    100% { transform: translate(0, 0); }
+}
+
+.logos section img {
+    width: 100%;
+}
+
+
+.lojaWarner, .lojaHbo .descricao-lateral { order: 1; text-align: start;}
+.lojaWarner,.lojaHbo .img-loja { order: 2; }
+
+.lojaDc .descricao-lateral { order: 2; text-align: end; display: flex; align-items: end; gap: 30px;}
+.lojaDc .img-loja { order: 1;}
+
+.lojaHbo .descricao-lateral { order: 1; text-align: start;}
+.lojaHbo .img-loja { order: 2; }
+
+.lojaHarry .descricao-lateral { order: 2; text-align: end; display: flex; align-items: end;}
+.lojaHarry .img-loja { order: 1; }
+
+.lojaMonica .descricao-lateral { order: 1; text-align: start; }
+.lojaMonica .img-loja { order: 2; }
+
+.lojaFresno .descricao-lateral { order: 2; text-align: end; display: flex; align-items: end;}
+.lojaFresno .img-loja { order: 1; }
+
+.lojaCartoon .descricao-lateral { order: 1; text-align: start;}
+.lojaCartoon .img-loja { order: 2; }
+
+#lojas-main h1 {
+    font-size: 25pt;
+}
+
+@media (max-width: 1180px) {
+    /* TROCAR IMAGEM DA FRESNO */
+}
+
+
+@media (max-width: 768px) {
+    .faixa {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .descricao-lateral {
+        width: 90%;
+        height: 20%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .lojas-button {
+        display: none;
+    }
+
+    .personagem {
+        min-width: 768px;
+    }
+
+    .mobile {
+        display: flex;
+    }
+}

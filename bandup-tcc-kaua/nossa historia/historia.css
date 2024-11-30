@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    max-width: 2000px;
+    margin: auto;
+}
+
+main {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-img{
+    display: flex;
+}
+
+.header-img img {
+    height: auto;
+    width: 100%;
+    max-width: 2000px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+/* .efeito-fadeIn {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 1s ease;
+}
+
+.efeito-fadeIn--visible {
+    transform: translateY(0);
+    opacity: 1;
+} */
+
+
+/* ESTILO DA SEÇÃO APRESENTACAO */
+.apresentacao {
+    display: flex;
+    height: auto;
+    width: 100%;
+    background-color: #EBEBEB;
+}
+
+
+.apresentacao-content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 90px;
+}
+
+.apresentacao-txt {
+    height: auto;
+    max-width: 700px;
+    font-size: 22pt;
+    margin: 20px;
+}
+
+.card-dog {
+    display: flex;
+
+}
+
+.card-dog img {
+    height: auto;
+    width: 100%;
+    min-width: 200px;
+}
+
+.apresentacao-img img {
+    width: 50%;
+    height: auto;
+}
+
+
+@media (max-width: 750px) {
+   .apresentacao-content {
+        flex-direction: column;
+   }
+   
+   .apresentacao-txt {
+        text-align: center;
+        margin-bottom: 1rem;
+        width: 80%;
+        font-size: 1.2rem;
+   }
+
+   .card-dog {
+        border-radius: 30rem;
+        justify-content: center;
+   }
+
+   .card-dog img {
+        width: 30%;
+        height: auto;
+   }
+}
+
+
+/* FIM DO ESTILO DA SEÇÃO APRESENTACAO */
+
+
+
+/* ESTILO DA SEÇÃO CONTEUDO-PRINCIPAL */
+/* ESTILO DA DIV BLOCO-TEXTO */
+.conteudo-principal {
+    width: 100%;
+    height: auto;
+}
+
+.bloco-texto {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    background-color: #1e1e1e;
+}
+
+.texto-principal {
+    height: auto;
+    text-align: center;
+    color: white;
+    font-size: 18pt;
+}
+
+.titulo-principal {
+    font-family: Arial, sans-serif;  
+    font-weight: bold;               
+    font-size: 5rem;                 
+    line-height: 1.2;                
+    text-transform: uppercase;       
+    max-width: 100%;                 
+    display: flex;                   
+    flex-direction: column;         
+    align-items: flex-end;        
+}
+
+.titulo-principal span {
+    display: block;                  
+    background-color: yellow;         
+    padding: 5px 10px;               
+    margin-bottom: 5px;               
+    box-sizing: border-box;           
+    text-align: left;               
+    width: max-content;              
+}
+
+
+@media (max-width: 1500px) {
+    .titulo-principal {
+        font-size: 4rem;           
+    }
+}
+
+@media (max-width: 1260px) {
+    .titulo-principal {
+        font-size: 3.5rem;           
+    }
+}
+
+@media (max-width: 1130px) {
+    .titulo-principal {
+        font-size: 3rem;           
+    }
+}
+
+@media (max-width: 1012px) {
+    .titulo-principal {
+        font-size: 2.5rem;           
+    }
+}
+
+@media (max-width: 866px) {
+    .titulo-principal {
+        font-size: 2rem;        
+    }
+}
+
+/* FIM DO ESTILO DA DIV BLOCO-TEXTO */
+
+/* ESTILO DA DIV VISITA */
+.visita {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px;
+    background-color: #EBEBEB;
+}
+
+.visita-img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.visita-txt {
+    width: 40%;
+    height: auto;
+    text-align: start;
+    color: black;
+    font-size: 15pt;
+}
+
+.visita-img img {
+    width: 100%;
+}
+
+#visitaTxt1 {
+    padding-bottom: 2rem;
+}
+
+@media (max-width: 650px) {
+    .bloco-texto {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .texto-principal {
+        margin-bottom: 1rem;
+        text-align: center;
+        width: 80%;
+    }
+
+    .titulo-principal {
+        align-items: center; 
+    }
+
+    .titulo-principal span {
+        text-align: center;
+    }
+
+    .visita {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .visita-txt {
+        text-align: center;
+        margin-bottom: 1rem;
+        width: 80%;
+    }
+}
+
+@media (max-width: 430px) {
+    .titulo-principal {
+        font-size: 2rem;
+    }
+}
+
+
+/* FIM DO ESTILO DA DIV VISITA */
+
+/* RESPONSIVIDADE DE TEXTOS */
+@media (max-width: 1500px) {
+    h1 {
+        font-size: 2.5rem;
+        font-weight: bolder;
+        padding-bottom: 0.5rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 1260px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 1130px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 1012px) {
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 866px) {
+    h1 {
+        font-size: 1.1rem;
+    }
+
+    p {
+        font-size: .8rem;
+    }
+}
+/* FIM DO ESTILO DA SEÇÃO CONTEUDO-PRINCIPAL */
