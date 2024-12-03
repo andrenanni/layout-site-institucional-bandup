@@ -37,16 +37,6 @@ header{
     box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.5);
 }
 
-
-
-
-
-
-
-
-
-
-
 /*--Slider--*/
 
 main{
@@ -66,7 +56,7 @@ main .slide .item{
     height: 270px;
     position: absolute;
     top: 72%;
-    transform: translate(0, -50%);
+    transform: translate(90%, -50%);
     border-radius: 20px;
     box-shadow: 0 30px 50px #505050;
     background-position: 50% 50%;
@@ -87,7 +77,7 @@ main .slide .item{
 
 .slide .item:nth-child(3){
     left: 50%;
-    height: 35%;
+    height: 310px;
 }
 
 .slide .item:nth-child(4){
@@ -119,6 +109,9 @@ main .slide .item{
 }
 
 .content .name{
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
     font-size: 40px;
     text-transform: uppercase;
     font-weight: bold;
@@ -127,17 +120,29 @@ main .slide .item{
 }
 
 .content .des{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
     margin-top: 10px;
     margin-bottom: 20px;
     opacity: 0;
     animation: animate 1s ease-in-out 0.3s 1 forwards;
 }
 
-.content button{
+.content .btn{
+    display: inline-block;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
     padding: 10px 20px;
-    border: none;
+    border-radius: 20px;
     cursor: pointer;
     opacity: 0;
+    background-color: #eee;
+    color: black;
+    text-decoration: none;
+    z-index: 100;
+    position: relative;
     animation: animate 1s ease-in-out 0.6s 1 forwards;
 }
 
