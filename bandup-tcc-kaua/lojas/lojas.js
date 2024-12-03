@@ -1,4 +1,4 @@
-const textos = ["Warner Bros?", "DC Comics?", "Cartoon Network?", "HBO?", "Harry Potter?", "Mônica?", "Fresno?"];
+const textos = ["Warner Bros", "DC Comics", "Cartoon Network", "HBO", "Harry Potter", "Turma da Mônica", "Fresno Shop"];
 const mudaTextoElement = document.querySelector('.muda-texto');
 let index = 0;
 let charIndex = 0;

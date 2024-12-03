@@ -22,6 +22,7 @@ html, body {
     overflow-y: scroll;
     height: 100vh;
     text-align: center;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
 
 .banner-lojas {
@@ -59,7 +60,7 @@ html, body {
 
 .lojaWarner { background: linear-gradient(#cf7413, #ff8400); }
 .lojaDc { background: linear-gradient(#1974F0, #0E438A); }
-.lojaHbo { background: linear-gradient(#000000, #5a0000); }
+.lojaHbo { background-image: url(img/posters/HBOposter.jpg); }
 .lojaCartoon { background: linear-gradient(#5E5D5C, #8B8B8B); }
 .lojaFresno { background-color: #01E5D4; }
 .lojaMonica { background: linear-gradient(#ED1C24, #871015); }
@@ -220,9 +221,6 @@ html, body {
 }
 
 .logo { 
-    width: 50px;
-    height: 50px;
-    background-color: gray;
     position: absolute;
     opacity: 0;
     animation: aparecer 1s forwards, moverAleatorio 50s ease-in-out infinite;
