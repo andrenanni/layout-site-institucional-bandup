@@ -63,6 +63,7 @@ main .slide .item{
     background-size: cover;
     display: inline-block;
     transition: 0.5s;
+    z-index: 5;
 }
 
 .slide .item:nth-child(1),
@@ -102,6 +103,7 @@ main .slide .item{
     transform: translate(0, -50%);
     font-family: system-ui;
     display: none;
+    z-index: 5;
 }
 
 .slide .item:nth-child(2) .content{
@@ -129,7 +131,7 @@ main .slide .item{
     animation: animate 1s ease-in-out 0.3s 1 forwards;
 }
 
-.content .btn{
+.btn{
     display: inline-block;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
@@ -147,13 +149,13 @@ main .slide .item{
 }
 
 @keyframes animate{
-    from{
+    0%{
         opacity: 0;
         transform: translate(0, 100px);
         filter: blur(33px);
     }
 
-    to{
+    100%{
         opacity: 1;
         transform: translate(0);
         filter: blur(0);
@@ -165,8 +167,10 @@ main .slide .item{
     justify-content: center;
     position: absolute;
     width: 100%;
-    height: 100%;
-    align-items: flex-end
+    align-items: flex-end;
+    z-index: 5;
+    bottom: 0;
+    margin-bottom: 10px;
 }
 
 .button button{
@@ -175,7 +179,6 @@ main .slide .item{
     border-radius: 100px;
     cursor: pointer;
     margin: 0 3px;
-    margin-bottom: 10px;
     border: 1px solid rgb(34, 34, 34);
     transition: 0.3s;
 }
