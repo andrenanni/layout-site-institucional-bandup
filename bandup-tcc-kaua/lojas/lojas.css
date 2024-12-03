@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -60,7 +62,12 @@ html, body {
 
 .lojaWarner { background: linear-gradient(#cf7413, #ff8400); }
 .lojaDc { background: linear-gradient(#1974F0, #0E438A); }
-.lojaHbo { background-image: url(img/posters/HBOposter.jpg); }
+.lojaHbo {
+    background-image: url(img/posters/HBOposter.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 .lojaCartoon { background: linear-gradient(#5E5D5C, #8B8B8B); }
 .lojaFresno { background-color: #01E5D4; }
 .lojaMonica { background: linear-gradient(#ED1C24, #871015); }
@@ -191,7 +198,11 @@ html, body {
     justify-content: start;
 }
 #poster-fresno { transform: rotateY(180deg); }
-#logo-warner, #logo-dc {  width: 100%; height: auto; max-width: 500px; }
+#logo-warner, #logo-dc {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+}
 #poster-cartoon { padding-top: 4rem; animation: cartoon 5s ease-in-out infinite;}
 @keyframes cartoon {
         0% { transform: translateY(-10px);}
@@ -287,6 +298,9 @@ html, body {
 
 #lojas-main h1 {
     font-size: 25pt;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
 }
 
 @media (max-width: 1180px) {
